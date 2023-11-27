@@ -1,0 +1,14 @@
+@import "../../App.scss";
+.homePage {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    padding: 1rem 3rem;
+
+
+    @include mobile{
+     padding: 10px;
+    }
+    // @include tablet {
+    //   padding: 20px;
+    // }
+  }}

@@ -1,0 +1,97 @@
+@import "../../App.scss";
+
+.login {
+  @include themify($themes) {
+    height: 100vh;
+    background-color: rgb(195, 190, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .card {
+      display: flex;
+      width: 55%;
+      background-color: themed("bg");
+      min-height: 32rem;
+      border-radius: 10px;
+      overflow: hidden;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      @media screen and (max-width:480px) {
+        flex-direction: column;
+      }
+      .left {
+        flex: 1;
+        background: linear-gradient(
+            rgba(39, 11, 96, 0.8),
+            rgba(39, 11, 96, 0.3)
+          ),
+          url("https://i.postimg.cc/TY6mPs7J/login3.jpg");
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.2rem;
+        @include mobile{
+          display: none;
+        }
+        h1 {
+          color: #fff;
+          font-size: 5rem;
+          line-height: 1;
+        }
+        p {
+          color: #fff;
+        }
+        span {
+          color: #fff;
+          font-size: 0.8rem;
+        }
+        button {
+          padding: 0.8rem;
+          font-size: 1rem;
+          width: 50%;
+          background-color: white;
+          color: #33305a;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+
+      .right {
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+        form {
+          input {
+            width: 100%;
+            border-bottom: 1px solid gray;
+            margin-bottom: 1rem;
+            padding: 10px 0;
+          }
+          button {
+            width: 50%;
+            padding: 0.8rem;
+            font-weight: bold;
+            color: white;
+            background-color: #655dcd;
+            margin-top: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

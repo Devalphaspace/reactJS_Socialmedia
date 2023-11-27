@@ -1,0 +1,217 @@
+@import "../../App.scss";
+
+.profile {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+   
+    .images {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      @include mobile{
+        height: 200px;
+      }
+
+      .cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .profilePic {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 200px;
+        @include mobile{
+          width: 120px;
+        height: 120px;
+        top: 150px;
+        }
+       
+  
+      }
+    }
+    .profileContainer {
+      padding: 1rem 3rem;
+
+        @include mobile{
+          padding: 10px;
+        }
+
+        // @include tablet{
+        //   padding: 20px;
+        // }
+
+      .userInfo {
+        height: 250px;
+        -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include mobile{
+          flex-direction: column;
+          height: 30vh;
+          padding: 20px;
+          margin-top: 80px;
+        }
+
+        .left {
+          flex: 1;
+          display: flex;
+          gap: 10px;
+
+          //   @include tablet{
+          //     flex-wrap: wrap;
+          //   }
+
+          a {
+            color: themed("textColorSoft");
+          }
+        }
+
+        .center {
+          flex: 3;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          span {
+            font-size: 30px;
+            font-weight: 600;
+            @include mobile{
+              font-size: 25px;
+            }
+          }
+
+          .info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .item {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              color: themed("textColorSoft");
+              @include mobile{
+                gap: 3px;
+              }
+              span {
+                font-size: 14px;
+               @include mobile{
+                margin-right:8px ;
+               }
+              }
+            }
+          }
+          button {
+            border: none;
+            background-color: #5271ff;
+            color: white;
+            padding: 10px 20px;
+            // border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+
+        .right {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 10px;
+        }
+      }
+    }
+    
+    .userPosts{
+      padding: 0 1rem;
+      .container {
+        background-color: themed('bg');
+        color: themed("textColor");
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+        padding: 1.2rem;
+        .user {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+              object-fit: cover;
+            }
+            .details {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              .name {
+                font-weight: 500;
+              }
+              .date {
+                font-size: 12px;
+                color: themed("textColorSoft");
+              }
+            }
+          }
+        }
+        .content{
+          margin: 1.2rem 0;
+          // p{
+  
+          // }
+          img{
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            margin-top: 10px;
+          }
+        }
+        .actions{
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          color: themed('textColor');
+          .item{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+}
